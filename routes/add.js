@@ -25,7 +25,7 @@ router.post('/', function(req, res, next) {
             err.password="设置的密码不能少于六位"
         };
     }
-    if(JSON.stringify(err)=="{}"){
+    if(JSON.stringify(err)=="{}"){//判断是否为空
          req.body.password = md5(password);//给密码加密处理
          db.collection("users").find({email:email},function(err,docs){//在数据库中搜索邮箱是否已经存在
              if(docs.length==0){//邮箱不存在的情况
