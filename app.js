@@ -1,4 +1,5 @@
 var createError = require('http-errors');
+// 引入了express
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
